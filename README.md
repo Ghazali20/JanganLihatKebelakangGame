@@ -1,101 +1,119 @@
-# JanganLihatKebelakangGame
+ A. # Identitas Diri
+     1.
+     2. Muhammad Ghazali  (102062400101)
+
+
+
+
+
+ B. # JanganLihatKebelakangGame
 
 🧠 Judul: Jangan Lihat Ke Belakang
 🎮 Genre: Horor Psikologis, Petualangan Interaktif
-🧍‍♂️ Karakter Utama:
+
+**🤩 Karakter Utama:**
 Nama dan umur dimasukkan oleh pemain di awal game.
-🎭 Sinopsis:
+
+**🧐 Sinopsis:**
 Di sebuah rumah tua peninggalan keluarga, kamu menemukan sebuah cermin antik yang diyakini memiliki kekuatan terkutuk. Malam itu, kamu memutuskan untuk mengungkap kebenaran di balik bisikan dan bayangan yang menghantuimu. Tapi satu aturan paling penting harus selalu diingat:
+**Jangan sekali-kali melihat ke belakang.**
 
-Jangan sekali-kali melihat ke belakang.
 
-
-Memiliki atribut:
-
+😋 **Memiliki atribut:**
 Health (kesehatan) — mulai dari 100
-
 XP (pengalaman) — mulai dari 0
 
-🪞 Awal Cerita:
+
+ **Awal Cerita:**
 Kamu berdiri di depan sebuah cermin tua yang misterius, dalam suasana rumah lama yang kosong dan mencekam.
 
-🔀 Pilihan di Scene 1:
-Tatap cermin → ke Scene 2
+**Pilihan di Scene 1:**
+1.Tatap cermin → ke Scene 2
+2.Panggil nama sendiri → ke Scene 3
+3.Sentuh permukaan → ke Scene 2
 
-Panggil nama sendiri → ke Scene 3
+🌀Percabangan Cerita:
+**Scene 2 – Cermin mulai berembun, padahal ruangan ini dingin. Kabut perlahan membentuk pola aneh.**
+1.Usap cermin → Scene 3
+2.Gambar simbol → Scene 4
+3.Biarkan saja → Scene 3
 
-Sentuh permukaan → ke Scene 2
+**Scene 3 – Lampu gantung mulai berkedip. Sekilas kamu melihat bayangan bergerak di refleksi cermin.**
+2.Abaikan → Scene 4
+3.Matikan lampu → Scene 5
 
-🌀 Percabangan Cerita:
-🔹 Scene 2 – Cermin mulai berembun
-Usap cermin → Scene 3
+**Scene 4 –Di balik cermin, terlihat siluet seseorang... atau sesuatu. Ia tak bergerak, hanya menatap balik.**
+1.Dekati → Scene 5
+2.Teriak → Scene 6
+3.Ambil foto → Scene 6
 
-Gambar simbol → Scene 4
+**Scene 5 – Cermin mulai retak di bagian tengah. Sebuah suara lirih berkata, ‘Tolong aku....**
+1.Pukul cermin → Scene 6
+2.Diam → Scene 7
+3.Lari → Ending: Neutral
 
-Biarkan saja → Scene 3
+**Scene 6 – Terdengar bisikan dari cermin: ‘Lihat aku… hanya sekali saja…’.**
+1.Lihat → Ending: Bad
+2.Tutup mata → Scene 7
+3.Balik badan → Ending: Neutral
 
-🔹 Scene 3 – Lampu berkedip
-Periksa lampu → Scene 4
+**Scene 7 – Tangisan terdengar dari dalam cermin. Suara perempuan… mungkin anak kecil.**
+1.Panggil namanya → Scene 8
+2.Diam saja → Scene 8
+3.Menangis juga → Scene 9
 
-Abaikan → Scene 4
+**Scene 8 – Cermin menjadi hitam legam, seperti kolam tak berdasar. Refleksimu tak terlihat.**
+1.Sentuh cermin → Scene 9
+2.Ambil batu → Scene 9
+3.Berdoa → Scene 10
 
-Matikan lampu → Scene 5
+**Scene 9 – Tiba-tiba, sebuah tangan pucat merobek permukaan cermin dari dalam. Menjalar ke arahmu.**
+1.Tarik tangan itu → Scene 10
+2.Lari → Ending: Neutral
+3.Diam di tempat → Ending: Bad
 
-🔹 Scene 4 – Bayangan muncul
-Dekati → Scene 5
+**Scene 10 – Cermin pecah menjadi berkeping-keping. Suara jeritan perempuan menggema di seluruh rumah.**
+1.Menutup mata → Ending: Good
+2.Menatap pecahan → Ending: Bad
+3.Mundur perlahan → Ending: Neutral
 
-Teriak → Scene 6
+ Ending Kemungkinan:
+ 😎 Good Ending:
+      Kamu menutup mata. Saat membukanya kembali, cermin telah pecah dan semua rasa takut menghilang. Kamu berhasil membebaskan dirimu.
 
-Ambil foto → Scene 6
+ 😭 Bad Ending:
+      Kamu menoleh ke belakang atau menatap pecahan cermin. Jeritan terdengar, dan semuanya menghilang... termasuk kamu.
 
-🔹 Scene 5 – Cermin mulai retak
-Pukul cermin → Scene 6
+ 😄 Neutral Ending:
+      Kamu selamat, tapi merasa seperti masih ada yang mengawasimu. Trauma itu tidak hilang.
 
-Diam → Scene 7
+C. # Refleksi 
 
-Lari → Ending: Neutral
+  selama proses pembuatan game berbasis teks ini, saya mendapatkan banyak pelajaran dan pengalaman baru, khususnya dalam pemahaman konsep Object-Oriented Programming (OOP) dan bagaimana cara mengimplementasikannya dalam bahasa Java.
 
-🔹 Scene 6 – Bisikan “lihat aku”
-Lihat → Ending: Bad
+1. Penerapan Konsep OOP
+      Saya belajar bagaimana membagi program menjadi beberapa class dengan tanggung jawab masing-masing, seperti:
+    a). Character untuk menyimpan data dan status pemain,
+    b). Scene untuk mengatur tiap adegan cerita,
+    c). Story sebagai pengontrol alur permainan,
+    d).  Main sebagai titik awal menjalankan game.
+    Dengan struktur ini, kode menjadi lebih terorganisir, mudah dikembangkan, dan lebih fleksibel jika ingin menambahkan fitur atau memperluas       cerita.
 
-Tutup mata → Scene 7
+2. Penggunaan Logika Cabang
+    Dalam game ini, pemain bisa memilih beberapa opsi yang mengarah ke adegan berbeda. Ini mengajarkan saya bagaimana pentingnya logika             percabangan dan struktur data seperti map untuk menangani pilihan dan transisi antar adegan.
 
-Balik badan → Ending: Neutral
+3. Manajemen Input Pengguna
+    Saya juga belajar bagaimana menggunakan Scanner untuk menangkap input dari pemain dan bagaimana cara memproses input tersebut agar tidak        terjadi error, misalnya saat pemain mengetik "INFO".
 
-🔹 Scene 7 – Terdengar suara tangisan
-Panggil namanya → Scene 8
+4. Penyusunan Cerita
+Membuat alur cerita bercabang dengan 10
 
-Diam saja → Scene 8
+5. Kesabaran dan Ketelitian
 
-Menangis juga → Scene 9
+6. Kreativitas
+   Saya memahami bahwa pemrograman bukan hanya soal teknis, tetapi juga soal bagaimana menghidupkan ide-ide kreatif menjadi sesuatu yang nyata.
 
-🔹 Scene 8 – Cermin menghitam
-Sentuh cermin → Scene 9
 
-Ambil batu → Scene 9
 
-Berdoa → Scene 10
-
-🔹 Scene 9 – Tangan keluar dari cermin
-Tarik tangan itu → Scene 10
-
-Lari → Ending: Neutral
-
-Diam di tempat → Ending: Bad
-
-🔹 Scene 10 – Cermin pecah
-Menutup mata → Ending: Good
-
-Menatap pecahan → Ending: Bad
-
-Mundur perlahan → Ending: Neutral
-
-🎯 Ending Kemungkinan:
-✅ Good Ending:
-Kamu menutup mata. Saat membukanya kembali, cermin telah pecah dan semua rasa takut menghilang. Kamu berhasil membebaskan dirimu.
-
-❌ Bad Ending:
-Kamu menoleh ke belakang atau menatap pecahan cermin. Jeritan terdengar, dan semuanya menghilang... termasuk kamu.
-
-🟡 Neutral Ending:
-Kamu selamat, tapi merasa seperti masih ada yang mengawasimu. Trauma itu tidak hilang.
+D. # Sumber Rujukan
+    Google Browser, Youtube
