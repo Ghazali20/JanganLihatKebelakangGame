@@ -12,6 +12,7 @@ package janganlihatkebalakang;
 
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -30,22 +31,27 @@ public class Main {
         Scene endBad = new Scene("BAD ENDING: Kamu melihat ke belakang atau menatap pecahan cermin. Suara jeritan menelanmu dalam kegelapan. Kamu tak pernah ditemukan.");
         Scene endNeutral = new Scene("NEUTRAL ENDING: Kamu berhasil keluar. Tapi setiap kali melihat cermin, kamu merasa... dia masih di sana.");
 
-        // Story scenes
-        Scene scene1 = new Scene(" Kamu berdiri di depan sebuah cermin tua yang misterius, dalam suasana rumah lama yang kosong dan mencekam.");
-        Scene scene2 = new Scene("Cermin mulai berembun, padahal ruangan ini dingin. Kabut perlahan membentuk pola aneh.");
-        Scene scene3 = new Scene("Lampu gantung mulai berkedip. Sekilas kamu melihat bayangan bergerak di refleksi cermin..");
-        Scene scene4 = new Scene("Di balik cermin, terlihat siluet seseorang... atau sesuatu. Ia tak bergerak, hanya menatap balik.");
-        Scene scene5 = new Scene("Cermin mulai retak di bagian tengah. Sebuah suara lirih berkata, ‘Tolong aku....");
-        Scene scene6 = new Scene("Terdengar bisikan dari cermin: ‘Lihat aku… hanya sekali saja…’.");
-        Scene scene7 = new Scene("Tangisan terdengar dari dalam cermin. Suara perempuan… mungkin anak kecil.");
-        Scene scene8 = new Scene("Cermin menjadi hitam legam, seperti kolam tak berdasar. Refleksimu tak terlihat.");
-        Scene scene9 = new Scene("Tiba-tiba, sebuah tangan pucat merobek permukaan cermin dari dalam. Menjalar ke arahmu.");
-        Scene scene10 = new Scene("Cermin meledak menjadi ribuan keping. Suara jeritan perempuan menggema di seluruh rumah.");
+         // Story scenes
+        Scene scene1 = new Scene("Kamu memasuki sebuah rumah lalu menemukan sebuah cermin tua antik serta kamu melihat sebuah ruangan yang kosong gelap.");
+        Scene sceneItem = new Scene("Kamu masuk ke sebuah ruangan gelap dan melihat senter di lantai. Di ruangan itu ternyata tidak ada apa-apa dan kamu memutuskan untuk kemabli ke kaca antik itu karena merasa penasaran .");
+        Scene scene2 = new Scene("Cermin mulai berembun.");
+        Scene scene3 = new Scene("Lampu berkedip-kedip.");
+        Scene scene4 = new Scene("Bayangan muncul di balik cermin.");
+        Scene scene5 = new Scene("Cermin mulai retak.");
+        Scene scene6 = new Scene("Seseorang berbisik 'lihat aku'.");
+        Scene scene7 = new Scene("Kamu mendengar suara tangisan dari balik cermin.");
+        Scene scene8 = new Scene("Cermin tiba-tiba menghitam.");
+        Scene scene9 = new Scene("Sebuah tangan keluar dari cermin.");
+        Scene scene10 = new Scene("Cermin pecah berkeping-keping. Suara jeritan memekakkan telinga.");
 
-        // Set choices
+        // Set choices & connections
         scene1.setChoices("Tatap cermin", scene2, 0, 5,
-                          "Panggil nama sendiri", scene3, 5, 5,
-                          "Sentuh permukaan", scene2, 0, 10);
+                          "Masuk ke ruangan gelap", sceneItem, 0, 5,
+                          "Sentuh permukaan cermin", scene2, 0, 10);
+
+        sceneItem.setChoices("Ambil senter", scene2, 0, 5,
+                             "Abaikan dan kembali", scene2, 0, 0,
+                             "Teriak minta tolong", scene2, 5, 0);
 
         scene2.setChoices("Usap cermin", scene3, 0, 5,
                           "Gambar simbol", scene4, 5, 5,
@@ -75,15 +81,17 @@ public class Main {
                           "Ambil batu", scene9, 5, 5,
                           "Berdoa", scene10, 0, 10);
 
-        scene9.setChoices("Tarik tangan itu", scene10, 20, 10,
-                          "Lari", endNeutral, 0, 5,
-                          "Diam di tempat", endBad, 100, 0);
+        scene9.setChoices("Lari", endBad, 100, 0,
+                          "Pukul tangan itu", scene10, 10, 10,
+                          "Tutup mata", scene10, 0, 10);
 
-        scene10.setChoices("Menutup mata", endGood, 0, 15,
-                           "Menatap pecahan", endBad, 100, 5,
-                           "Mundur perlahan", endNeutral, 10, 10);
+        scene10.setChoices("Hancurkan cermin", endGood, 0, 20,
+                           "Menoleh ke belakang", endBad, 100, 0,
+                           "Diam terpaku", endNeutral, 0, 5);
 
         Story story = new Story(scene1, player);
         story.start();
+        
+        
     }
 }
