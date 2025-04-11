@@ -12,7 +12,6 @@ package janganlihatkebalakang;
 
 import java.util.Scanner;
 
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -33,15 +32,15 @@ public class Main {
 
          // Story scenes
         Scene scene1 = new Scene("Kamu memasuki sebuah rumah lalu menemukan sebuah cermin tua antik serta kamu melihat sebuah ruangan yang kosong gelap.");
-        Scene sceneItem = new Scene("Kamu masuk ke sebuah ruangan gelap dan melihat senter di lantai. Di ruangan itu ternyata tidak ada apa-apa dan kamu memutuskan untuk kemabli ke kaca antik itu karena merasa penasaran .");
-        Scene scene2 = new Scene("Cermin mulai berembun.");
-        Scene scene3 = new Scene("Lampu berkedip-kedip.");
-        Scene scene4 = new Scene("Bayangan muncul di balik cermin.");
-        Scene scene5 = new Scene("Cermin mulai retak.");
-        Scene scene6 = new Scene("Seseorang berbisik 'lihat aku'.");
-        Scene scene7 = new Scene("Kamu mendengar suara tangisan dari balik cermin.");
+        Scene sceneItem = new Scene("Kamu masuk ke sebuah ruangan gelap dan melihat senter di lantai. Di ruangan itu ternyata tidak ada apa-apa dan kamu memutuskan untuk kembali ke kaca antik itu karena merasa penasaran .");
+        Scene scene2 = new Scene("kamu kembali ke cermin antik itu dan melihat cerminnya mulai berembun.");
+        Scene scene3 = new Scene("Lampu mulai berkedip-kedip.");
+        Scene scene4 = new Scene("Tiba- tiba ada bayangan muncul di balik cermin.");
+        Scene scene5 = new Scene("Cermin itu tiba-tiba mulai retak.");
+        Scene scene6 = new Scene("Kamu mendengar suara seseorang berbisik 'lihat aku...' (iiiii seremnyaaa).");
+        Scene scene7 = new Scene("Kamu mendengar suara tangisan dari balik cermin. (hatii-hatii yaaa)");
         Scene scene8 = new Scene("Cermin tiba-tiba menghitam.");
-        Scene scene9 = new Scene("Sebuah tangan keluar dari cermin.");
+        Scene scene9 = new Scene("Sebuah tangan keluar dari cermin. (semangat yaa)");
         Scene scene10 = new Scene("Cermin pecah berkeping-keping. Suara jeritan memekakkan telinga.");
 
         // Set choices & connections
