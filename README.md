@@ -1,5 +1,5 @@
  A. # Identitas Diri
-     1.
+     1. Muhammad Rafli Firman Riandra (102062400143)
      2. Muhammad Ghazali  (102062400101)
 
 
