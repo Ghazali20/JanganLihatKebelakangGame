@@ -42,6 +42,9 @@ public class Scene {
         if (choices.containsKey(input)) {
             Choice c = choices.get(input);
             player.updateStats(-c.hpChange, c.xpChange);
+            if (c.text.toLowerCase().contains("ambil senter")) {
+                player.setHasFlashlight(true);
+            }
             return c.nextScene;
         }
         return null;
