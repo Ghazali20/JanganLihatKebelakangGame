@@ -14,12 +14,14 @@ public class Character {
     private int age;
     private int health;
     private int xp;
+    private boolean hasFlashlight;
 
     public Character(String name, int age) {
         this.name = name;
         this.age = age;
         this.health = 100;
         this.xp = 0;
+        this.hasFlashlight = false;
     }
 
     public void updateStats(int healthChange, int xpChange) {
@@ -28,8 +30,17 @@ public class Character {
         if (health > 100) health = 100;
         if (health < 0) health = 0;
     }
+    
+    public void setHasFlashlight(boolean hasFlashlight) {
+        this.hasFlashlight = hasFlashlight;
+    }
+
+    public boolean hasFlashlight() {
+        return hasFlashlight;
+    }
 
     public String getInfo() {
-        return "Nama: " + name + " | Umur: " + age + " | Health: " + health + " | XP: " + xp;
+        return "Nama: " + name + " | Umur: " + age + " | Health: " + health + " | XP: " + xp +
+               (hasFlashlight ? " | Item: Senter" : " | Item: Tidak ada");
     }
 }
